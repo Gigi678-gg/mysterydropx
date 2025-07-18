@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MysteryDropX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #121212;
+      color: white;
+      margin: 0;
+      padding: 2rem;
+    }
+    .btn {
+      background: #ff5e5e;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      margin-top: 2rem;
+      cursor: pointer;
+    }
+    .surprise {
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Привет, <span id="username">гость</span>!</h1>
+  <p>Готов открыть свой таинственный подарок?</p>
+  <button class="btn" onclick="revealGift()">Открыть подарок 🎁</button>
+  <div class="surprise" id="surprise"></div>
+
+  <script>
+    const tg = window.Telegram.WebApp;
+    tg.expand();
+    const user = tg.initDataUnsafe.user;
+    if (user) {
+      document.getElementById('username').textContent = user.first_name;
+    }
+
+    const gifts = ["🎉 Бонус 100 очков!", "💎 Супер-приз!", "🙃 Увы, пусто!", "🎁 Мега подарок!", "🔥 Огненная награда!"];
+
+    function revealGift() {
+      const surprise = gifts[Math.floor(Math.random() * gifts.length)];
+      document.getElementById('surprise').textContent = surprise;
+    }
+  </script>
+</body>
+</html>
