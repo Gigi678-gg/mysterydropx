@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gifts Battle</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0d0d;
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    header {
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .balance {
+      display: flex;
+      gap: 12px;
+      font-size: 14px;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .tabs button {
+      background: #222;
+      border: none;
+      padding: 8px 16px;
+      color: white;
+      border-radius: 8px;
+    }
+    .cases {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      padding: 12px;
+    }
+    .case-card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 8px;
+      text-align: center;
+    }
+    .case-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .case-title {
+      font-size: 14px;
+      margin: 8px 0 4px;
+    }
+    .case-label {
+      font-size: 12px;
+      color: #00ccff;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #111;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      border-top: 1px solid #222;
+    }
+    footer div {
+      font-size: 12px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Gifts Battle</strong></div>
+    <div class="balance">
+      ⭐ 61
+      🎟️ 0
+    </div>
+  </header>
+
+  <div class="tabs">
+    <button>Все</button>
+    <button>Бесплатные Кейсы</button>
+    <button>Микс Кейсы</button>
+  </div>
+
+  <div class="cases">
+    <div class="case-card">
+      <img src="https://via.placeholder.com/150" alt="case" />
+      <div class="case-title">За промокод</div>
+      <div class="case-label">Бесплатно</div>
+    </div>
+    <div class="case-card">
+      <img src="https://via.placeholder.com/150" alt="case" />
+      <div class="case-title">Пополнение от 1000</div>
+      <div class="case-label">Бесплатно</div>
+    </div>
+    <div class="case-card">
+      <img src="https://via.placeholder.com/150" alt="case" />
+      <div class="case-title">За вход</div>
+      <div class="case-label">Бесплатно</div>
+    </div>
+    <div class="case-card">
+      <img src="https://via.placeholder.com/150" alt="case" />
+      <div class="case-title">За друга</div>
+      <div class="case-label">Бесплатно</div>
+    </div>
+  </div>
+
+  <footer>
+    <div>🎁 Конкурсы</div>
+    <div>⬆️ Апгрейд</div>
+    <div>📦 Кейсы</div>
+    <div>👥 Друзья</div>
+    <div>👤 Профиль</div>
+  </footer>
+</body>
+</html>
